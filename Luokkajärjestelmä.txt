@@ -1,0 +1,15 @@
+Luokat:
+
+	Ihminen
+		Kantaja = False
+		Peelo = True
+		"Immuuni" = False
+		# 1 = lapsi/nuori, 2 = aikuinen ja 3 = mahdollinen keski-ikäinen
+		Ikä = painotettu valinta(1, 2, 3)
+	
+	Itikka
+		Kantaja = False
+		# Nainen on aina oikeassa, joten Nainen = True ja mies = False
+		Sukupuoli = False
+		# Kantoja on kahdenlaisia, on immuuneja (True) ja epäimmuuneja (False)
+		OnkoKantaImmuuni = True
