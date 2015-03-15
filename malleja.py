@@ -1,4 +1,5 @@
 import random, math
+from random import random
 
 # Tärkeät luvut
 birthRate = 40.87/1000
@@ -15,19 +16,14 @@ class Ihminen:
         self.Immuuni = False
         # 1 = lapsi/nuori, 2 = aikuinen ja 3 = mahdollinen keski-ikäinen
         self.ikä = random.choose([1,2,3])
-        # Ihmisen sukupuoli
+        # Ihmisen sukupuoli. Koska nainen on aina oikeassa nainen = True
+        self.sukupuoli = random() >= 0.5
 
-    def kantajanMuutos(self):
-        if self.kantaja:
-            self.kantaja = False
-        else:
-            self.kantaja = True
+    def kantajanMuutos(self, boolean):
+        self.kantaja = boolean
 
-    def immuuniMuutos(self):
-        if self.Immuuni:
-            self.Immuuni = False
-        else:
-            self.Immuuni = True
+    def immuuniMuutos(self, boolean):
+        self.Immuuni = boolean
 
 class kylä:
     """Container of humans"""
@@ -40,3 +36,4 @@ class kylä:
         for i in range(birthRate * self.määrä):
             kylänIhmiset.add(Ihminen())
             self.määrä += 1
+        
