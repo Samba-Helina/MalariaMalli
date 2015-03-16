@@ -1,7 +1,7 @@
 import random, math
 from random import random
 
-# Tärkeät luvut
+# value importante
 birthRate = 40.87/1000
 deathRate = 13.91/1000
 
@@ -11,29 +11,29 @@ class Ihminen:
     """Jokaisen ihmisen pohja"""
 
     def __init__(self):
-        self.kantaja = False
+        self.exposed = False
         self.Peelo = True
-        self.Immuuni = False
-        # 1 = lapsi/nuori, 2 = aikuinen ja 3 = mahdollinen keski-ikäinen
-        self.ikä = random.choose([1,2,3])
+        self.Immune= False
+        # 1 = lapsi/nuori, 2 = aikuinen ja 3 = possible middle-aged
+        self.age = random.choose([1,2,3])
         # Ihmisen sukupuoli. Koska nainen on aina oikeassa nainen = True
-        self.sukupuoli = random() >= 0.5
+        self.gender = random() >= 0.5
 
     def kantajanMuutos(self, boolean):
-        self.kantaja = boolean
+        self.exposed = boolean
 
     def immuuniMuutos(self, boolean):
-        self.Immuuni = boolean
+        self.Immune = boolean
 
-class kylä:
+class village:
     """Container of humans"""
 
-    def __init__(self, ihmiset):
-        self.kylänIhmiset = ihmiset
-        self.määrä = size(ihmiset)
+    def __init__(self, humans):
+        self.villageHumans = humans
+        self.population = size(humans)
 
     def vuosiVaihtuu(self):
         for i in range(birthRate * self.määrä):
-            kylänIhmiset.add(Ihminen())
+            villageHumans.add(Ihminen())
             self.määrä += 1
         

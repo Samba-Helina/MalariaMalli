@@ -17,3 +17,6 @@ Luokat:
 		Sukupuoli = False
 		# Kantoja on kahdenlaisia, on immuuneja (True) ja epäimmuuneja (False)
 		OnkoKantaImmuuni = True
+
+Vaikuttavia asioita:
+	- Kuivuus
