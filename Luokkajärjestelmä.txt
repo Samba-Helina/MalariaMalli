@@ -6,6 +6,10 @@ Luokat:
 		"Immuuni" = False
 		# 1 = lapsi/nuori, 2 = aikuinen ja 3 = mahdollinen keski-ik‰inen
 		Ik‰ = painotettu valinta(1, 2, 3)
+
+	Kyl‰
+		ihmistenM‰‰r‰ = depends
+		
 	
 	Itikka
 		Kantaja = False
