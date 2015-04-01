@@ -14,7 +14,7 @@ class Ihminen:
         self.exposed = False
         self.Peelo = True
         self.Immune= False
-        # 1 = lapsi/nuori, 2 = aikuinen ja 3 = possible middle-aged
+        # 1 = child/young, 2 = adult and 3 = possible middle-aged
         self.age = random.choose([1,2,3])
         # Ihmisen sukupuoli. Koska nainen on aina oikeassa nainen = True
         self.gender = random() >= 0.5
